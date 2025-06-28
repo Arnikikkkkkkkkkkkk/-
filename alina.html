@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Алина Смирнова — Живой альбом</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Алина Смирнова — Живой школьный альбом</h1>
+
+  <div class="video-block">
+    <h2>Тизер (доступен сразу)</h2>
+    <video width="320" height="180" controls>
+      <source src="videos/teaser.mp4" type="video/mp4" />
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <div class="video-block" id="video1">
+    <h2>Видео 1 (откроется 28 июня 2026)</h2>
+    <div class="locked">Видео ещё не доступно.</div>
+  </div>
+
+  <div class="video-block" id="video2">
+    <h2>Видео 2 (откроется 28 июня 2027)</h2>
+    <div class="locked">Видео ещё не доступно.</div>
+  </div>
+
+  <script src="js/timer.js"></script>
+  <script>
+    // Инициализируем таймер с датами и видео
+    initTimer([
+      { id: 'video1', unlockDate: '2026-06-28T00:00:00Z', videoSrc: 'videos/video1.mp4' },
+      { id: 'video2', unlockDate: '2027-06-28T00:00:00Z', videoSrc: 'videos/video2.mp4' },
+    ]);
+  </script>
+</body>
+</html>
